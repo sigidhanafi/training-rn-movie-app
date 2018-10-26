@@ -1,7 +1,19 @@
 /** @format */
+import { Navigation } from "react-native-navigation";
+import App from './src/App';
+import HomeScreen from './src/components/HomeScreen';
+import MovieScreen from './src/components/MovieScreen';
 
-import {AppRegistry} from 'react-native';
-import App from './src/components/HomeScreen';
-import {name as appName} from './app.json';
+Navigation.registerComponent('navigation.playground.Initialize', () => App);
+Navigation.registerComponent('navigation.playground.HomeScreen', () => HomeScreen);
+Navigation.registerComponent('navigation.playground.MovieScreen', () => MovieScreen);
 
-AppRegistry.registerComponent(appName, () => App);
+Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setRoot({
+    root: {
+      component: {
+        name: "navigation.playground.Initialize"
+      }
+    }
+  });
+});
