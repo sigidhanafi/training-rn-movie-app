@@ -11,6 +11,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 import Header from './Header'
 import Banner from './Banner'
+import MovieList from './MovieList'
 
 const styles = StyleSheet.create({
   container: {
@@ -25,6 +26,7 @@ export default class HomeScreen extends Component {
       <View style={styles.container}>
         <Header />
         <Banner />
+        <MovieList />
       </View>
     )
   }
