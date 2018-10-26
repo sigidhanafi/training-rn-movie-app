@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     height: 54,
     backgroundColor: '#000000',
     justifyContent: 'center',
-    alignItems: 'center',
   },
   appName: {
     color: '#FFFFFF',
